@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-8">
+      <h3> Total funds {{money}} </h3>
+    </div>
+    <div class="col-xs-4">
+      <button (click)="checkFunds()" class="btn btn-info">Check Current Funds</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">
+      <input [(ngModel)]="paymentOut" type="text">
+      <p>
+        <span class="glyphicon glyphicon-triangle-right"></span>
+      </p>
+      <input [(ngModel)]="money" type="text" disabled>
+    </div>
+    <div class="col-xs-4">
+      <button (click)="decreaseMoney()" class="btn btn-primary">Transfer Funds</button>
+    </div>
+  </div>
+</div>
