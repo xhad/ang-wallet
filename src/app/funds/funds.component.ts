@@ -14,8 +14,4 @@ export class FundsComponent implements OnInit {
   }
   currentFundsUSD = 100;
   currentFundsKRW = 12000;
-
-  calculateFunds(){
-
-  }
 }

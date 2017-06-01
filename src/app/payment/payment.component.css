@@ -1,7 +1,11 @@
-input, h4{
+input, h4, p,label{
   float:left;
 }
+button{
+  min-width: 140px;
+}
 
-p{
-  float:left;
+.info{
+  background-color: skyblue;
+  color: white;
 }

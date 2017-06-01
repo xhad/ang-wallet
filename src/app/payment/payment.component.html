@@ -4,19 +4,74 @@
       <h3> Total funds {{money}} </h3>
     </div>
     <div class="col-xs-4">
-      <button (click)="checkFunds()" class="btn btn-info">Check Current Funds</button>
+      <button (click)="checkFunds()" class="btn btn-info">Check Funds</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      Address to transfer to:
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <input class="form-control input-lg" type="text">
     </div>
   </div>
   <div class="row">
     <div class="col-xs-8">
+      <label>Transferring funds amount</label>
       <input [(ngModel)]="paymentOut" type="text">
       <p>
         <span class="glyphicon glyphicon-triangle-right"></span>
       </p>
+      <label>Funds after transfer</label>
       <input [(ngModel)]="money" type="text" disabled>
     </div>
     <div class="col-xs-4">
       <button (click)="decreaseMoney()" class="btn btn-primary">Transfer Funds</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8">
+      <label>Requesting funds amount</label>
+      <input [(ngModel)]="paymentIn" type="number">
+      <p>
+        <span class="glyphicon glyphicon-triangle-left"></span>
+      </p>
+      <label>Funds after transfer</label>
+      <input [(ngModel)]="money" type="number" disabled>
+    </div>
+    <div class="col-xs-4">
+      <button (click)="increaseMoney()" class="btn btn-primary">Recieve Funds</button>
+    </div>
+  </div>
+  <div class="container-fluid">
+  <div class="row" >
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-6" [ngClass]="{info: money>0}">
+          <p> Available to withdraw</p>
+        </div>
+        <div class="col-xs-6" [ngClass]="{info: money>0}">
+          <p>{{ money }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6" [ngClass]="{info: money>0}">
+          <p> Available to withdraw from BTC</p>
+        </div>
+        <div class="col-xs-6" [ngClass]="{info: money>0}">
+          <p>{{ money }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <textarea class="form-control" rows="2" placeholder="Add a message"></textarea>
+      </div>
     </div>
   </div>
 </div>

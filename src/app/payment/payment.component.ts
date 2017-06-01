@@ -12,13 +12,19 @@ export class PaymentComponent implements OnInit {
   ngOnInit() {
   }
 
+  change:number = 0;
   money:number = 100;
+  paymentOut:number = 0;
+  paymentIn:number = 0;
   checkFunds(){
     this.money = this.money + Math.random()*.8;
+    this.money = parseFloat((this.money).toFixed(2));
   }
 
-  paymentOut = 0;
   decreaseMoney(){
     this.money -= this.paymentOut;
+  }
+  increaseMoney(){
+    this.money += this.paymentIn;
   }
 }
