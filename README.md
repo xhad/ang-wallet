@@ -1,3 +1,5 @@
+<img width="1040" alt="screen shot 2017-06-01 at 11 57 04 pm" src="https://cloud.githubusercontent.com/assets/10606510/26685860/3e851292-4726-11e7-95e5-a3944839499d.png">
+
 # Day3
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.6.
