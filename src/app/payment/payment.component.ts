@@ -16,9 +16,15 @@ export class PaymentComponent implements OnInit {
   money:number = 100;
   paymentOut:number = 0;
   paymentIn:number = 0;
+  transactions = [];
+  transactionsTimes = [];
+
   checkFunds(){
     this.money = this.money + Math.random()*.8;
     this.money = parseFloat((this.money).toFixed(2));
+    this.transactions.push(this.money);
+    this.transactionsTimes.push(new Date());
+    console.log(this.transactions);
   }
 
   decreaseMoney(){
