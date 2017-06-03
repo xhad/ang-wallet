@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { FundsComponent } from './funds/funds.component';
 import { PaymentComponent } from './payment/payment.component';
 
+import { PaymentService } from './services/payment.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +18,16 @@ import { PaymentComponent } from './payment/payment.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
-  providers: [],
+  providers: [
+    /**
+     * and import the PaymentService provider here. Now it's available in
+     * all of your components.
+     */
+    PaymentService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
